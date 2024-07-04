@@ -46,25 +46,36 @@
 // console.log('max value is',max);
 
 
-const heights = [65,66,68,72,78,60,65,66,79];
+// const heights = [65,66,68,72,78,60,65,66,79];
 
-function getMax(numbers){
-    let max =numbers[0];
+// function getMax(numbers){
+//     let max =numbers[0];
+//     for(const num of numbers){
+//         if(num>max){
+//             max = num;
+//         }
+//     }
+//     return max;
+// }
+// const max = getMax(heights);
+// console.log('the highest height is:',max);
+
+
+
+const height = [65,66,58,72,78,60,65,66,79];
+
+
+function getMin(numbers){
+    let min = numbers[0];
     for(const num of numbers){
-        if(num>max){
-            max = num;
+        if(num<min){
+            min = num;
         }
     }
-    return max;
+    return min;
 }
-const max = getMax(heights);
-console.log('the highest height is',max);
-
-
-
-
-
-
+const min = getMin(height);
+console.log('Minimum height person in this group is:',min);
 
 
 
