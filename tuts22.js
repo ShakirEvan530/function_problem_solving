@@ -62,32 +62,61 @@
 
 
 
-const height = [65,66,58,72,78,60,65,66,79];
+// const height = [65,66,58,72,78,60,65,66,79];
 
 
-function getMin(numbers){
-    let min = numbers[0];
-    for(const num of numbers){
-        if(num<min){
-            min = num;
-        }
-    }
-    return min;
+// function getMin(numbers){
+//     let min = numbers[0];
+//     for(const num of numbers){
+//         if(num<min){
+//             min = num;
+//         }
+//     }
+//     return min;
+// }
+// const min = getMin(height);
+// console.log('Minimum height person in this group is:',min);
+
+
+
+// function woodQuantity(chairQuantity, tableQuantity, bedQuantity){
+//     const perChairWood = 3;
+//     const perTableWood = 10;
+//     const perBedWood = 50;
+
+//     const chairTotalWood = chairQuantity * perChairWood;
+//     const tableTotalWood = tableQuantity * perTableWood;
+//     const bedTotalWood = bedQuantity* perBedWood;
+
+//     const totalWood = chairTotalWood  + tableTotalWood + bedTotalWood;
+//     return totalWood; 
+// }
+
+// const wood = woodQuantity(1,1,1);
+// console.log('total wood needed for the room setup',wood);
+
+
+
+// shirt price = 500
+// pant price = 300
+// shoe price = 900
+
+function cost(shirtQuantity , pantQuantity, shoeQuantity){
+    const perShirtPrice = 500;
+    const perPantPrice = 300;
+    const perShoePrice = 900;
+
+
+    const totalShirtPrice = perShirtPrice * shirtQuantity;
+    const totalPantPrice = perPantPrice * pantQuantity;
+    const totalShoePrice = shoeQuantity * perShoePrice;
+
+    const totalTakaNeed = totalShirtPrice + totalPantPrice + totalShoePrice;
+    return totalTakaNeed;
 }
-const min = getMin(height);
-console.log('Minimum height person in this group is:',min);
 
-
-
-
-
-
-
-
-
-
-
-
+const totalCost = cost(2,2,1);
+console.log('total cost me in this season market is:',totalCost);
 
 
 
