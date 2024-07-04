@@ -101,29 +101,43 @@
 // pant price = 300
 // shoe price = 900
 
-function cost(shirtQuantity , pantQuantity, shoeQuantity){
-    const perShirtPrice = 500;
-    const perPantPrice = 300;
-    const perShoePrice = 900;
+// function cost(shirtQuantity , pantQuantity, shoeQuantity){
+//     const perShirtPrice = 500;
+//     const perPantPrice = 300;
+//     const perShoePrice = 900;
 
 
-    const totalShirtPrice = perShirtPrice * shirtQuantity;
-    const totalPantPrice = perPantPrice * pantQuantity;
-    const totalShoePrice = shoeQuantity * perShoePrice;
+//     const totalShirtPrice = perShirtPrice * shirtQuantity;
+//     const totalPantPrice = perPantPrice * pantQuantity;
+//     const totalShoePrice = shoeQuantity * perShoePrice;
 
-    const totalTakaNeed = totalShirtPrice + totalPantPrice + totalShoePrice;
-    return totalTakaNeed;
+//     const totalTakaNeed = totalShirtPrice + totalPantPrice + totalShoePrice;
+//     return totalTakaNeed;
+// }
+
+// const totalCost = cost(2,2,1);
+// console.log('total cost me in this season market is:',totalCost);
+
+
+const phones=[
+    {name:'Samsung',price:20000,camera:'12mp',color:'black'},
+    {name:'xioami',price:16000,camera:'12mp',color:'black'},
+    {name:'oppo',price:21000,camera:'12mp',color:'black'},
+    {name:'Iphone',price:26000,camera:'12mp',color:'black'},
+    {name:'Walton',price:31000,camera:'12mp',color:'black'},
+    {name:'HTC',price:27000,camera:'12mp',color:'black'}
+]
+function getCheapestPhones(phones){
+    let min = phones[0];
+    for(const phone of phones){
+        if(phone.price<min.price){
+            min = phone;
+        }
+    }
+    return min;
 }
-
-const totalCost = cost(2,2,1);
-console.log('total cost me in this season market is:',totalCost);
-
-
-
-
-
-
-
+const minimum = getCheapestPhones(phones);
+console.log('cheapest phone price is:',minimum);
 
 
 
