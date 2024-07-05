@@ -141,27 +141,41 @@
 
 
 
-const numbers = [300,100,700,1200];
-const products = [
-    {name :'shampoo',price: 300},
-    {name :'chiruni',price: 100},
-    {name :'shirt',price: 700},
-    {name :'pant',price: 1200},
+// const numbers = [300,100,700,1200];
+// const products = [
+//     {name :'shampoo',price: 300},
+//     {name :'chiruni',price: 100},
+//     {name :'shirt',price: 700},
+//     {name :'pant',price: 1200}
+// ]
+//     function getShoppingTotal(products){
+//         let total = 0;
+//         for(const product of products){
+//           total= total + product.price;
+//         }
+//         return total;
+//     }
+// const total = getShoppingTotal(products);
+// console.log('total ajke khosabe:', total);
+
+
+const products =[
+    {name :'shampoo',price: 300,quantity:2},
+    {name :'chiruni',price: 100,quantity:3},
+    {name :'shirt',price: 700,quantity:5},
+    {name :'pant',price: 1200,quantity:1}
 ]
-    function getShoppingTotal(products){
-        let total = 0;
-        for(const product of products){
-          total= total + product.price;
-        }
-        return total;
+
+function cartTotal(products){
+    let total =0;
+    for(const product of products){
+        const thisProductCost = product.price * product.quantity;
+        total = total + thisProductCost;
     }
-const total = getShoppingTotal(products);
-console.log('total ajke khosabe:', total);
-
-
-
-
-
+    return total;
+}
+const totalCost = cartTotal(products)
+console.log('total cost after buying all the thing is:',totalCost);
 
 
 
