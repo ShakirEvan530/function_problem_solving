@@ -119,25 +119,93 @@
 // console.log('total cost me in this season market is:',totalCost);
 
 
-const phones=[
-    {name:'Samsung',price:20000,camera:'12mp',color:'black'},
-    {name:'xioami',price:16000,camera:'12mp',color:'black'},
-    {name:'oppo',price:21000,camera:'12mp',color:'black'},
-    {name:'Iphone',price:26000,camera:'12mp',color:'black'},
-    {name:'Walton',price:31000,camera:'12mp',color:'black'},
-    {name:'HTC',price:27000,camera:'12mp',color:'black'}
+// const phones=[
+//     {name:'Samsung',price:20000,camera:'12mp',color:'black'},
+//     {name:'xioami',price:16000,camera:'12mp',color:'black'},
+//     {name:'oppo',price:21000,camera:'12mp',color:'black'},
+//     {name:'Iphone',price:26000,camera:'12mp',color:'black'},
+//     {name:'Walton',price:31000,camera:'12mp',color:'black'},
+//     {name:'HTC',price:27000,camera:'12mp',color:'black'}
+// ]
+// function getCheapestPhones(phones){
+//     let min = phones[0];
+//     for(const phone of phones){
+//         if(phone.price<min.price){
+//             min = phone;
+//         }
+//     }
+//     return min;
+// }
+// const minimum = getCheapestPhones(phones);
+// console.log('cheapest phone price is:',minimum);
+
+
+
+const numbers = [300,100,700,1200];
+const products = [
+    {name :'shampoo',price: 300},
+    {name :'chiruni',price: 100},
+    {name :'shirt',price: 700},
+    {name :'pant',price: 1200},
 ]
-function getCheapestPhones(phones){
-    let min = phones[0];
-    for(const phone of phones){
-        if(phone.price<min.price){
-            min = phone;
+    function getShoppingTotal(products){
+        let total = 0;
+        for(const product of products){
+          total= total + product.price;
         }
+        return total;
     }
-    return min;
-}
-const minimum = getCheapestPhones(phones);
-console.log('cheapest phone price is:',minimum);
+const total = getShoppingTotal(products);
+console.log('total ajke khosabe:', total);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
