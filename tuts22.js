@@ -178,26 +178,51 @@
 // console.log('total cost after buying all the thing is:',totalCost);
 
 
-function discountedPrice(quantity){
-    if(quantity<=100){
-        const total = quantity*100;
+// function discountedPrice(quantity){
+//     if(quantity<=100){
+//         const total = quantity*100;
+//         return total;
+//     }
+//     else if(quantity<=200){
+//         const total = quantity*90;
+//         return total;
+//     }
+//     else{
+//         const total = quantity*80;
+//         return total
+//     }
+// }
+// const totalPrice = discountedPrice(10);
+// console.log('total price of the product is:',totalPrice);
+
+
+function layerDiscountedTotal (quantity){
+    const first100Price = 100;
+    const second100Price = 90;
+    const above200Price = 80;
+
+    if(quantity <=100){
+        const total = quantity* first100Price;
         return total;
     }
-    else if(quantity<=200){
-        const total = quantity*90;
+    else if( quantity <=200){
+        const first100Total = 100 * first100Price;
+        const remainingQuantity = quantity -100;
+        const remainingTotal = remainingQuantity * 90;
+        const total = first100Total + remainingTotal;
         return total;
     }
     else{
-        const total = quantity*80;
-        return total
+        const first100Total = 100 * first100Price;
+        const second100Total = 100 * second100Price;
+        const remainingQuantity = quantity - 200;
+        const remainingTotal = remainingQuantity * above200Price;
+        const total = first100Total + second100Total + remainingTotal;
+        return total;
     }
 }
-const totalPrice = discountedPrice(10);
-console.log('total price of the product is:',totalPrice);
-
-
-
-
+const totalPrice = layerDiscountedTotal(201);
+console.log('Total price after the discounted value is',totalPrice);
 
 
 
