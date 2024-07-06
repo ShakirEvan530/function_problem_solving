@@ -1,4 +1,9 @@
-
-// shirt price = 500
-// pant price = 300
-// shoe price = 900
+, num2){
+//     if(typeof num1 !== 'number' || num2!== 'number'){
+//         return ' please provide a number '
+//     }
+//     const mult = num1 * num2;
+//     return mult;
+// }
+// const result = multiply(5,'seven');
+// console.log(result);

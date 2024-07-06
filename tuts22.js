@@ -225,62 +225,79 @@
 // console.log('Total price after the discounted value is',totalPrice);
 
 
- function add(num1 ,num2){
-    return num1 + num2;
- }
+//  function add(num1 ,num2){
+//     return num1 + num2;
+//  }
  
- function substract(num1 , num2){
-    return num1-num2;
- }
+//  function substract(num1 , num2){
+//     return num1-num2;
+//  }
+// function multiply(num1, num2){
+//     return num1* num2;
+// }
+
+// function divide (num1,num2){
+//     return num1/num2;
+// }
+
+
+// function calculator(a,b,operation){
+//     if(operation === 'add'){
+//         const result = add(a,b);
+//         return result;
+//     }
+//     else if(operation === 'substract'){
+//         const result = substract(a,b);
+//         return result;
+//     }
+//     else if(operation === 'multiply'){
+//         const result = multiply(a,b);
+//         return result;
+//     }
+//     else if(operation ==='divide'){
+//         return divide(a,b);
+//     }
+//     else{
+//         return "only 'add' , 'substract', 'multiply' , 'divide ' operation is allowed. "
+//     }
+// }
+
+// const result = calculator(5,7,'add');
+// console.log(result);
+
+// const result2 = calculator(50,25,'substract');
+// console.log(result2);
+
+// const result3 = calculator(5,7,'multiply');
+// console.log(result3);
+
+// const result4 = calculator(50,10,'divide');
+// console.log(result4);
+
+
 function multiply(num1, num2){
-    return num1* num2;
+    if(typeof num1 !== 'number' || num2!== 'number'){
+        return ' please provide a number '
+    }
+    const mult = num1 * num2;
+    return mult;
 }
-
-function divide (num1,num2){
-    return num1/num2;
-}
-
-
-function calculator(a,b,operation){
-    if(operation === 'add'){
-        const result = add(a,b);
-        return result;
-    }
-    else if(operation === 'substract'){
-        const result = substract(a,b);
-        return result;
-    }
-    else if(operation === 'multiply'){
-        const result = multiply(a,b);
-        return result;
-    }
-    else if(operation ==='divide'){
-        return divide(a,b);
-    }
-    else{
-        return "only 'add' , 'substract', 'multiply' , 'divide ' operation is allowed. "
-    }
-}
-
-const result = calculator(5,7,'add');
+const result = multiply(5,'seven');
 console.log(result);
 
-const result2 = calculator(50,25,'substract');
-console.log(result2);
+function fullName(first , second){
+    if(typeof first !== 'string'){
+        return 'First name should be a string';
+    }
+    else if(typeof second !== 'string'){
+        return 'second name should be a string';
+    }
+    const full = first + ' ' + second;
+    return full;
+}
 
-const result3 = calculator(5,7,'multiply');
-console.log(result3);
-
-const result4 = calculator(50,10,'divide');
-console.log(result4);
-
-
-
-
-
-
-
-
+const full = fullName(5,'Sohan')
+console.log(full);
 
 
 
