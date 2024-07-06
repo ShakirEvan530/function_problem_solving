@@ -196,46 +196,83 @@
 // console.log('total price of the product is:',totalPrice);
 
 
-function layerDiscountedTotal (quantity){
-    const first100Price = 100;
-    const second100Price = 90;
-    const above200Price = 80;
+// function layerDiscountedTotal (quantity){
+//     const first100Price = 100;
+//     const second100Price = 90;
+//     const above200Price = 80;
 
-    if(quantity <=100){
-        const total = quantity* first100Price;
-        return total;
+//     if(quantity <=100){
+//         const total = quantity* first100Price;
+//         return total;
+//     }
+//     else if( quantity <=200){
+//         const first100Total = 100 * first100Price;
+//         const remainingQuantity = quantity -100;
+//         const remainingTotal = remainingQuantity * 90;
+//         const total = first100Total + remainingTotal;
+//         return total;
+//     }
+//     else{
+//         const first100Total = 100 * first100Price;
+//         const second100Total = 100 * second100Price;
+//         const remainingQuantity = quantity - 200;
+//         const remainingTotal = remainingQuantity * above200Price;
+//         const total = first100Total + second100Total + remainingTotal;
+//         return total;
+//     }
+// }
+// const totalPrice = layerDiscountedTotal(201);
+// console.log('Total price after the discounted value is',totalPrice);
+
+
+ function add(num1 ,num2){
+    return num1 + num2;
+ }
+ 
+ function substract(num1 , num2){
+    return num1-num2;
+ }
+function multiply(num1, num2){
+    return num1* num2;
+}
+
+function divide (num1,num2){
+    return num1/num2;
+}
+
+
+function calculator(a,b,operation){
+    if(operation === 'add'){
+        const result = add(a,b);
+        return result;
     }
-    else if( quantity <=200){
-        const first100Total = 100 * first100Price;
-        const remainingQuantity = quantity -100;
-        const remainingTotal = remainingQuantity * 90;
-        const total = first100Total + remainingTotal;
-        return total;
+    else if(operation === 'substract'){
+        const result = substract(a,b);
+        return result;
+    }
+    else if(operation === 'multiply'){
+        const result = multiply(a,b);
+        return result;
+    }
+    else if(operation ==='divide'){
+        return divide(a,b);
     }
     else{
-        const first100Total = 100 * first100Price;
-        const second100Total = 100 * second100Price;
-        const remainingQuantity = quantity - 200;
-        const remainingTotal = remainingQuantity * above200Price;
-        const total = first100Total + second100Total + remainingTotal;
-        return total;
+        return "only 'add' , 'substract', 'multiply' , 'divide ' operation is allowed. "
     }
 }
-const totalPrice = layerDiscountedTotal(201);
-console.log('Total price after the discounted value is',totalPrice);
 
+const result = calculator(5,7,'add');
+console.log(result);
 
+const result2 = calculator(50,25,'substract');
+console.log(result2);
 
+const result3 = calculator(5,7,'multiply');
+console.log(result3);
 
-
-
-
-
-
-
-
-
-
+const result4 = calculator(50,10,'divide');
+console.log(result4);
 
 
 
