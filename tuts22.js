@@ -275,39 +275,56 @@
 // console.log(result4);
 
 
-function multiply(num1, num2){
-    if(typeof num1 !== 'number' || num2!== 'number'){
-        return ' please provide a number '
+// function multiply(num1, num2){
+//     if(typeof num1 !== 'number' || num2!== 'number'){
+//         return ' please provide a number '
+//     }
+//     const mult = num1 * num2;
+//     return mult;
+// }
+// const result = multiply(5,'seven');
+// console.log(result);
+
+// function fullName(first , second){
+//     if(typeof first !== 'string'){
+//         return 'First name should be a string';
+//     }
+//     else if(typeof second !== 'string'){
+//         return 'second name should be a string';
+//     }
+//     const full = first + ' ' + second;
+//     return full;
+// }
+
+// const full = fullName(5,'Sohan')
+// console.log(full);
+
+
+function getPrice(product){
+    if(typeof product !== 'object'){
+        return 'please provide an object'
     }
-    const mult = num1 * num2;
-    return mult;
+    const price = product.price;
+    return price;
 }
-const result = multiply(5,'seven');
-console.log(result);
 
-function fullName(first , second){
-    if(typeof first !== 'string'){
-        return 'First name should be a string';
+// const price = getPrice({name: 'Chulkanir molom imported one', price:35, color:'blue'})
+const price = getPrice(5)
+// console.log(price);
+
+
+function getSecond(numbers){
+    if(Array.isArray(numbers) === false){
+        return 'please provide an array'
     }
-    else if(typeof second !== 'string'){
-        return 'second name should be a string';
-    }
-    const full = first + ' ' + second;
-    return full;
+    // console.log(Array.isArray(numbers));
+    const second = numbers[1];
+    return second;
 }
-
-const full = fullName(5,'Sohan')
-console.log(full);
-
-
-
-
-
-
-
-
-
-
+const second = getSecond([1,25,65]);
+const second1 = getSecond(45)
+console.log(second );
+console.log(second1);
 
 
 
